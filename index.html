@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <nav id="main-menu">
+            <ul>
+                <li><a href="#homepage" class="active">Home</a></li>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#savings">Savings</a></li>
+                <li><a href="#reports">Reports</a></li>
+                <li><a href="#device">Device</a></li>
+            </ul>
+        </nav>
+        <div id="theme-toggle" class="night-mode">
+            <button id="toggle-btn">🌙</button>
+        </div>
+    </header>
+
+    <main id="content">
+        <section id="homepage" class="page active">
+            <div class="welcome-container">
+                <h1>Welcome</h1>
+                <p></p>
+            </div>
+        </section>
+
+        <section id="dashboard" class="page">
+            <h1>Finance Dashboard</h1>
+            <div class="tracker-container">
+                <div class="income-box">
+                    <h2>Income</h2>
+                    <div id="income-categories">
+                    </div>
+                    <button id="add-income-category">Add Income Category</button>
+                </div>
+                <div class="expenses-box">
+                    <h2>Expenses</h2>
+                    <div id="expense-categories">
+                    </div>
+                    <button id="add-expense-category">Add Expense Category</button>
+                </div>
+            </div>
+            <div class="charts-container">
+                <div class="chart-selector">
+                    <button id="pie-chart-btn" class="active">Pie Chart</button>
+                    <button id="bar-chart-btn">Bar Chart</button>
+                </div>
+                <canvas id="finance-chart"></canvas>
+            </div>
+        </section>
+
+        <section id="savings" class="page">
+            <h1>Savings Tracker</h1>
+            <div class="savings-goals">
+            </div>
+            <button id="add-savings-goal">Add Savings Goal</button>
+        </section>
+
+        <section id="reports" class="page">
+            <h1>Reports</h1>
+            <div class="report-templates">
+                <button id="monthly-report">Generate Monthly Report</button>
+                <button id="yearly-report">Generate Yearly Report</button>
+            </div>
+            <div id="report-display" class="report-display">
+            </div>
+        </section>
+
+        <section id="device" class="page">
+            <h1>Device Customization</h1>
+            <div class="device-options">
+                <h3>Select Device View</h3>
+                <button id="mobile-view-btn">Mobile View</button>
+                <button id="desktop-view-btn" class="active">Desktop View</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
